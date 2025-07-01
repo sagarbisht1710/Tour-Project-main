@@ -4,22 +4,23 @@ A responsive and interactive travel website built to showcase tour packages, des
 
 ## 🔧 Technologies Used
 
-- **HTML5** – Structure and content  
-- **CSS3** – Styling and responsiveness  
-- **JavaScript** – Interactivity and dynamic behavior  
-- **PHP** – Backend contact form  
-- **MySQL** – (Optional for future database integration)
+- HTML5 – Structure and content  
+- CSS3 – Styling and responsiveness  
+- JavaScript – Interactivity and dynamic behavior  
+- PHP – Backend contact form  
+- MySQL – (Optional for future database integration)
 
 ## 📁 Project Structure
 
 Tour-Project-main/
-├── css/ # All stylesheet files
-├── images/ # Image assets
-├── js/ # JavaScript files
-├── screenshot/ # UI screenshots of the website
-├── contact_us.php # Backend contact form handler
-├── index.html # Main landing page
-└── README.md # Project documentation
+├── css/              # All stylesheet files
+├── images/           # Image assets
+├── js/               # JavaScript files
+├── screenshot/       # UI screenshots of the website
+├── contact_us.php    # Backend contact form handler
+├── index.html        # Main landing page
+└── README.md         # Project documentation
+
 
 ## 🖼️ Screenshots
 1. Screenshot 2025-07-01 080637.png
