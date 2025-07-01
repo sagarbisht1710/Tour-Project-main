@@ -1,33 +1,59 @@
-Tour-Project-main
-A responsive and dynamic website for showcasing and booking travel and tour packages. Built with HTML, CSS, JavaScript, and PHP, this project is ideal for travel agencies or personal use to present tour offerings and manage inquiries.
+# Tour-Project-main 🌍
 
-Project Overview
-Tour-Project-main aims to provide a seamless experience for users to explore destinations, view tour details, and make booking requests. It features a clean layout, user-friendly interface, and basic backend support.
+A responsive and interactive travel website built to showcase tour packages, destinations, and contact features. Designed with a user-friendly interface and modern front-end technologies, this project demonstrates a complete travel website UI.
 
-Tech Stack
-Frontend: HTML, CSS, JavaScript
+## 🔧 Technologies Used
 
-Folder Structure
+- **HTML5** – Structure and content  
+- **CSS3** – Styling and responsiveness  
+- **JavaScript** – Interactivity and dynamic behavior  
+- **PHP** – Backend contact form  
+- **MySQL** – (Optional for future database integration)
+
+## 📁 Project Structure
+
 Tour-Project-main/
-├── index.html
-├── about.html
-├── contact.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-├── images/
-│   └── (destination photos and icons)
-└── README.md
+├── css/ # All stylesheet files
+├── images/ # Image assets
+├── js/ # JavaScript files
+├── screenshot/ # UI screenshots of the website
+├── contact_us.php # Backend contact form handler
+├── index.html # Main landing page
+└── README.md # Project documentation
 
-Future Enhancements
-Integration with MySQL for storing bookings
+## 🖼️ Screenshots
 
-Admin dashboard for managing tours and messages
+> (Include screenshots from the `/screenshot` folder if available.)
 
-Payment gateway for online booking
+## 📬 Features
 
-User login/signup system
+- Beautiful and responsive tour homepage  
+- Animated sections using JavaScript  
+- Contact form with PHP integration  
+- Eye-catching image gallery and layout  
+- Structured folder system for easy scalability
+
+## 🚀 Getting Started
+
+To run the project locally:
+
+1. Clone the repository  
+https://github.com/sagarbisht1710/Tour-Project-main.git
+
+3. Open `index.html` in your browser.
+
+> If you're using the contact form, ensure your server supports PHP (like XAMPP, WAMP, or a live server with PHP support).
+
+## 📌 Future Enhancements
+
+- Add login/signup functionality  
+- Integrate a real-time booking system  
+- Use a database to store form submissions  
+- Deploy the website online
+
+## 📧 Contact
+
+Created by **Sagar Bisht** – [LinkedIn](https://www.linkedin.com/in/sagarbisht1710)
 
 Author
 Sagar Bisht
