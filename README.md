@@ -57,7 +57,7 @@ https://github.com/sagarbisht1710/Tour-Project-main.git
 
 ## 📧 Contact
 
-Created by **Sagar Bisht** – [LinkedIn](https://www.linkedin.com/in/sagarbisht1710)
+Created by **Sagar Bisht** – [LinkedIn](https://www.linkedin.com/in/sagar-bisht-235b25273/)
 
 Author
 Sagar Bisht
