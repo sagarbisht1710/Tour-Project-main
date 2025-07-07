@@ -19,7 +19,7 @@ Tour-Project-main/
 ├── screenshot/       # UI screenshots of the website
 ├── contact_us.php    # Backend contact form handler
 ├── index.html        # Main landing page
-└── README.md         # Project documentation
+└── README.md         # Project document 
 
 
 
