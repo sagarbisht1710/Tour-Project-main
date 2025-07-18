@@ -1,64 +1,87 @@
-# Tour-Project-main 🌍
 
-A responsive and interactive travel website built to showcase tour packages, destinations, and contact features. Designed with a user-friendly interface and modern front-end technologies, this project demonstrates a complete travel website UI.
 
-## 🔧 Technologies Used
+---
 
-- HTML5 – Structure and content  
-- CSS3 – Styling and responsiveness  
-- JavaScript – Interactivity and dynamic behavior  
-- PHP – Backend contact form  
-- MySQL – (Optional for future database integration)
+# 🌍 Tour Project – Responsive Travel Website
 
-## 📁 Project Structure
+A **responsive and interactive travel website** built to showcase tour packages, destinations, and a functional contact form. Designed with a **modern UI** and **user-friendly interface**, this project demonstrates a complete travel website experience using **front-end and basic back-end technologies**.
 
+---
+
+## 🔧 **Technologies Used**
+
+* **HTML5** – Structure and semantic content
+* **CSS3** – Styling and responsive design
+* **JavaScript** – Interactivity and animations
+* **PHP** – Backend for contact form handling
+* **MySQL** *(Optional for future integration)* – For dynamic data and booking system
+
+---
+
+## 📂 **Project Structure**
+
+```
 Tour-Project-main/
-├── css/              # All stylesheet files
+├── css/              # Stylesheets
 ├── images/           # Image assets
 ├── js/               # JavaScript files
-├── screenshot/       # UI screenshots of the website
-├── contact_us.php    # Backend contact form handler
+├── screenshot/       # UI screenshots
+├── contact_us.php    # Backend for contact form
 ├── index.html        # Main landing page
-└── README.md         # Project document 
+└── README.md         # Project documentation
+```
 
+---
 
+## 🖼 **Screenshots**
 
-## 🖼️ Screenshots
-1. Screenshot 2025-07-01 080637.png
-2. Screenshot 2025-07-01 080659.png
-3. Screenshot 2025-07-01 080746.png
-4. Screenshot 2025-07-01 080802.png
-5. Screenshot 2025-07-01 080819.png
+* Screenshot 2025-07-01 080637.png
+* Screenshot 2025-07-01 080659.png
+* Screenshot 2025-07-01 080746.png
+* Screenshot 2025-07-01 080802.png
+* Screenshot 2025-07-01 080819.png
 
-## 📬 Features
+---
 
-- Beautiful and responsive tour homepage  
-- Animated sections using JavaScript  
-- Contact form with PHP integration  
-- Eye-catching image gallery and layout  
-- Structured folder system for easy scalability
+## ✅ **Features**
 
-## 🚀 Getting Started
+* ✅ Responsive homepage with modern UI
+* ✅ Smooth animations using JavaScript
+* ✅ Functional contact form with PHP
+* ✅ Image gallery showcasing destinations
+* ✅ Organized folder structure for scalability
+
+---
+
+## 🚀 **Getting Started**
 
 To run the project locally:
 
-1. Clone the repository  
-https://github.com/sagarbisht1710/Tour-Project-main.git
+1. Clone the repository:
 
-3. Open `index.html` in your browser.
+   ```bash
+   git clone https://github.com/sagarbisht1710/Tour-Project-main.git
+   ```
+2. Open `index.html` in your browser.
 
-> If you're using the contact form, ensure your server supports PHP (like XAMPP, WAMP, or a live server with PHP support).
+> For the contact form, ensure you run the project on a server that supports PHP (e.g., **XAMPP**, **WAMP**, or a live server with PHP).
 
-## 📌 Future Enhancements
+---
 
-- Add login/signup functionality  
-- Integrate a real-time booking system  
-- Use a database to store form submissions  
-- Deploy the website online
+## 🔮 **Future Enhancements**
 
-## 📧 Contact
+* 🔐 Add login & signup functionality
+* 🛒 Implement real-time booking system
+* 🗄 Store user data and bookings in a database
+* 🌐 Deploy the website online
 
-Created by **Sagar Bisht** – [LinkedIn](https://www.linkedin.com/in/sagar-bisht-235b25273/)
+---
 
-Author
-Sagar Bisht
+## 📧 **Contact**
+
+Created by **Sagar Bisht**
+[LinkedIn](https://www.linkedin.com/in/sagar-bisht-235b25273/) | [GitHub](https://github.com/sagarbisht1710)
+
+---
+
+
