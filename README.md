@@ -2,7 +2,7 @@
 
 ---
 
-# 🌍 Tour Project – Responsive Travel Website
+# Tour Project – Responsive Travel Website
 
 A **responsive and interactive travel website** built to showcase tour packages, destinations, and a functional contact form. Designed with a **modern UI** and **user-friendly interface**, this project demonstrates a complete travel website experience using **front-end and basic back-end technologies**.
 
