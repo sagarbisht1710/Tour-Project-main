@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himachal Package - 15 Days Trip</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+    <style>
+                @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+
+        * {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: 0.2s linear;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            scroll-padding-top: 5rem;
+        }
+
+        section {
+            padding: 5rem 9%;
+        }
+
+        .fa-solid, .fas {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: green;
+        }
+
+        .btn {
+            margin-top: 1rem;
+            display: inline-block;
+            border: 0.35rem solid transparent;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            background: none;
+            font-size: 1.7rem;
+            padding: 1.5rem 3rem;
+            border-radius: 80px;
+        }
+
+        .btn:hover {
+            background: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            font-size: 4rem;
+            color: #10221b;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem 9%;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            background: #fff;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        }
+
+        .header .logo {
+            margin-right: auto;
+            font-size: 2.5rem;
+            color: black;
+            font-weight: bolder;
+        }
+
+        .header .navbar a {
+            margin-left: 2rem;
+            font-size: 1.7rem;
+            color: black;
+        }
+
+        .header .navbar a:hover {
+            color: green;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.pexels.com/photos/2961109/pexels-photo-2961109.jpeg');
+            background-size: cover;
+            background-position: center;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 6rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-content p {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            max-width: 80rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        .package-overview {
+            background: #eee;
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .overview-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            border: 0.2rem solid #10221b;
+        }
+
+        .overview-card i {
+            font-size: 4rem;
+            color: green;
+            margin-bottom: 1rem;
+        }
+
+        .overview-card h3 {
+            font-size: 2rem;
+            color: #10221b;
+            margin-bottom: 1rem;
+        }
+
+        .overview-card p {
+            font-size: 1.5rem;
+            color: #666;
+        }
+
+        .itinerary {
+            background: #fff;
+        }
+
+        .itinerary-container {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .day-card {
+            background: #f9f9f9;
+            border: 0.2rem solid #10221b;
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .day-card:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+        }
+
+        .day-header {
+            background: linear-gradient(135deg, green, #004b2e);
+            color: white;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .day-number {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            width: 6rem;
+            height: 6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .day-info h3 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .day-info p {
+            font-size: 1.4rem;
+            opacity: 0.9;
+        }
+
+        .day-content {
+            padding: 2rem;
+        }
+
+        .activities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .activity {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border-left: 0.4rem solid green;
+        }
+
+        .activity h4 {
+            color: #10221b;
+            margin-bottom: 0.5rem;
+            font-size: 1.6rem;
+        }
+
+        .activity p {
+            color: #666;
+            font-size: 1.3rem;
+            line-height: 1.6;
+        }
+
+        .highlights {
+            background: #eee;
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+            gap: 2rem;
+        }
+
+        .highlight-card {
+            background: #fff;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            border: 0.2rem solid #10221b;
+        }
+
+      .highlight-image { 
+          height: 20rem; background: linear-gradient(135deg, green, #004b2e);
+          display: flex; 
+          align-items: center;
+          justify-content: center;
+          color: white; font-size: 6rem; }
+
+       .highlight-image {
+          position: relative;
+          height: 200px; /* fixed height for a proper frame */
+          overflow: hidden;
+        }
+
+        .highlight-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* keeps the image aspect ratio and fills the container */
+             transition: transform 0.3s ease;
+        }
+
+        .highlight-image img:hover {
+            transform: scale(1.05); /* small zoom on hover for effect */
+         }
+
+         .highlight-content {
+            padding: 1rem;
+            background-color: #fff;
+         }
+
+        .highlight-content h3 {
+            margin: 0 0 0.5rem;
+            font-size: 1.2rem;
+            color: #004b2e;
+        }
+
+        .highlight-content p {
+           margin: 0;
+           font-size: 0.9rem;
+           color: #333;
+        }
+
+
+        .highlight-content {
+            padding: 2rem;
+        }
+
+        .highlight-content h3 {
+            font-size: 2rem;
+            color: #10221b;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-content p {
+            font-size: 1.4rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .pricing-section {
+            background: #fff;
+            text-align: center;
+        }
+
+        .pricing-card {
+            max-width: 50rem;
+            margin: 0 auto;
+            background: #f9f9f9;
+            border: 0.2rem solid #10221b;
+            border-radius: 1rem;
+            padding: 3rem;
+        }
+
+        .price-display {
+            font-size: 4rem;
+            color: green;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+
+        .inclusions {
+            text-align: left;
+            margin-bottom: 3rem;
+        }
+
+        .inclusions h3 {
+            font-size: 2rem;
+            color: #10221b;
+            margin-bottom: 1rem;
+        }
+
+        .inclusions ul {
+            list-style: none;
+        }
+
+        .inclusions li {
+            padding: 0.5rem 0;
+            font-size: 1.4rem;
+            color: #666;
+        }
+
+        .inclusions li i {
+            color: green;
+            margin-right: 1rem;
+        }
+
+        .inclusions-section {
+            background: #fff;
+        }
+
+        .inclusions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+            gap: 2rem;
+        }
+
+        .inclusion-card {
+            background: #f9f9f9;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-radius: 1rem;
+            border: 0.2rem solid #10221b;
+            transition: transform 0.3s ease;
+        }
+
+        .inclusion-card:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+        }
+
+        .inclusion-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .inclusion-card h3 {
+            font-size: 2rem;
+            color: #10221b;
+            margin-bottom: 1rem;
+        }
+
+        .inclusion-card p {
+            font-size: 1.4rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .booking-section {
+            background: linear-gradient(135deg, green, #004b2e);
+            color: white;
+            padding: 6rem 9%;
+        }
+
+        .booking-hero {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .booking-hero h1 {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        .booking-hero p {
+            font-size: 1.8rem;
+            max-width: 80rem;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .booking-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            max-width: 120rem;
+            margin: 0 auto;
+        }
+
+        .booking-form-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 1rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .booking-form-container h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: white;
+            text-align: center;
+        }
+
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1.2rem;
+            border: none;
+            border-radius: 0.5rem;
+            background: rgba(255, 255, 255, 0.9);
+            font-size: 1.4rem;
+            color: #333;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+        }
+
+        .booking-btn {
+            background: white;
+            color: #10221b;
+            border: none;
+            padding: 1.5rem 3rem;
+            font-size: 1.8rem;
+            font-weight: bold;
+            border-radius: 5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .booking-btn:hover {
+            transform: translateY(-0.2rem);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+            background: #f0f0f0;
+        }
+
+        .booking-guarantee {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .guarantee-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.2rem;
+            color: white;
+            opacity: 0.9;
+        }
+
+        .guarantee-item i {
+            color: green;
+        }
+
+        .booking-features {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        .feature i {
+            font-size: 3rem;
+            color: white;
+            opacity: 0.8;
+        }
+
+        .feature-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .feature-content p {
+            font-size: 1.4rem;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .footer {
+            background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #10221b;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .footer p {
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 991px) {
+            html {
+                font-size: 55%;
+            }
+            
+            .hero-content h1 {
+                font-size: 4rem;
+            }
+
+            .booking-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .day-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .activities {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .booking-section {
+                padding: 4rem 5%;
+            }
+
+            .inclusions-grid {
+                grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            }
+
+            .booking-guarantee {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .guarantee-item {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 450px) {
+            html {
+                font-size: 50%;
+            }
+            
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo"><i class="fas fa-hiking"></i> travel.com</a>
+        <nav class="navbar">
+            <a href="index.html#home">home</a>
+            <a href="index.html#category">Adventures</a>
+            <a href="index.html#packages">packages</a>
+            <a href="index.html#contact">contact</a>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Himachal Pradesh</h1>
+            <p>15 Days Ultimate Journey Through the Land of Gods - Experience the perfect blend of adventure, spirituality, and natural beauty in the heart of the Himalayas</p>
+            <div class="price-display">Rs 24,999 - Rs 29,999</div>
+            <a href="#package-details" class="btn">View Details</a>
+        </div>
+    </section>
+
+    <section class="package-overview" id="package-details">
+        <h1 class="heading">Package Overview</h1>
+        <div class="overview-grid">
+            <div class="overview-card">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Duration</h3>
+                <p>15 Days / 14 Nights</p>
+            </div>
+            <div class="overview-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Destinations</h3>
+                <p>8+ Beautiful Locations</p>
+            </div>
+            <div class="overview-card">
+                <i class="fas fa-mountain"></i>
+                <h3>Activities</h3>
+                <p>Adventure & Sightseeing</p>
+            </div>
+            <div class="overview-card">
+                <i class="fas fa-users"></i>
+                <h3>Group Size</h3>
+                <p>2-15 People</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="itinerary">
+        <h1 class="heading">15-Day Detailed Itinerary</h1>
+        <div class="itinerary-container">
+            
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">01</div>
+                    <div class="day-info">
+                        <h3>Delhi to Shimla</h3>
+                        <p>Journey begins to the Queen of Hills</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Start your Himachal adventure with a scenic drive from Delhi to Shimla, the former summer capital of British India.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Morning Departure</h4>
+                            <p>Leave Delhi early morning for a comfortable journey to Shimla</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Check-in & Rest</h4>
+                            <p>Arrive in Shimla, check into hotel and relax</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Evening Walk</h4>
+                            <p>Explore the famous Mall Road and Ridge area</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">02</div>
+                    <div class="day-info">
+                        <h3>Shimla Sightseeing</h3>
+                        <p>Explore the colonial charm</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Full day exploring Shimla's colonial architecture, temples, and scenic viewpoints.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Jakhu Temple</h4>
+                            <p>Visit the famous Hanuman temple with panoramic views</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Christ Church</h4>
+                            <p>Admire the neo-gothic architecture of this historic church</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Toy Train Ride</h4>
+                            <p>Experience the UNESCO World Heritage Kalka-Shimla railway</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">03</div>
+                    <div class="day-info">
+                        <h3>Shimla to Manali</h3>
+                        <p>Journey to the Valley of Gods</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Travel through scenic mountain roads to reach the beautiful hill station of Manali.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Scenic Drive</h4>
+                            <p>Enjoy breathtaking views during the 7-hour journey</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Kullu Valley</h4>
+                            <p>Stop and explore the famous Kullu valley en route</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Evening Arrival</h4>
+                            <p>Check into hotel in Manali and rest</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">04</div>
+                    <div class="day-info">
+                        <h3>Solang Valley Adventure</h3>
+                        <p>Adrenaline-packed day</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Experience thrilling adventure activities in the famous Solang Valley.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Paragliding</h4>
+                            <p>Soar above the valley with professional instructors</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Cable Car Ride</h4>
+                            <p>Enjoy panoramic views from the ropeway</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Adventure Sports</h4>
+                            <p>Try zorbing, ATV rides, and skiing (seasonal)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">05</div>
+                    <div class="day-info">
+                        <h3>Rohtang Pass Excursion</h3>
+                        <p>High altitude adventure</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Visit the spectacular Rohtang Pass at 13,050 feet altitude (subject to weather conditions).</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Snow Activities</h4>
+                            <p>Play in snow and enjoy snow scooter rides</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Photography</h4>
+                            <p>Capture stunning mountain vistas and glaciers</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Local Culture</h4>
+                            <p>Interact with local Himalayan communities</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">06</div>
+                    <div class="day-info">
+                        <h3>Manali Local Sightseeing</h3>
+                        <p>Cultural and spiritual exploration</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Explore Manali's ancient temples, hot springs, and traditional markets.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Hidimba Temple</h4>
+                            <p>Visit the ancient wooden temple in cedar forest</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Vashisht Hot Springs</h4>
+                            <p>Relax in natural hot water springs</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Mall Road Shopping</h4>
+                            <p>Shop for local handicrafts and woolens</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">07</div>
+                    <div class="day-info">
+                        <h3>Manali to Kasauli</h3>
+                        <p>Journey to the cantonment town</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Travel to the serene hill station of Kasauli, known for its colonial architecture and peaceful atmosphere.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Scenic Route</h4>
+                            <p>Enjoy beautiful mountain scenery during the drive</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Check-in</h4>
+                            <p>Arrive and settle into your hotel</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Evening Walk</h4>
+                            <p>Stroll through the peaceful cantonment area</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">08</div>
+                    <div class="day-info">
+                        <h3>Kasauli Exploration</h3>
+                        <p>Colonial heritage and nature</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Discover Kasauli's colonial charm, ancient temples, and spectacular viewpoints.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Monkey Point</h4>
+                            <p>Highest peak with 360-degree mountain views</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Christ Church</h4>
+                            <p>Beautiful Gothic revival architecture</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Mall Road Walk</h4>
+                            <p>Enjoy the Victorian-era architecture</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">09</div>
+                    <div class="day-info">
+                        <h3>Kasauli to Dharamshala</h3>
+                        <p>Journey to the Dalai Lama's residence</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Travel to Dharamshala, the winter capital of Himachal Pradesh and home to the Dalai Lama.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Mountain Drive</h4>
+                            <p>Scenic journey through pine forests</p>
+                        </div>
+                        <div class="activity">
+                            <h4>McLeod Ganj</h4>
+                            <p>Check into hotel in Little Lhasa</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Evening Meditation</h4>
+                            <p>Experience peaceful Tibetan atmosphere</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">10</div>
+                    <div class="day-info">
+                        <h3>Dharamshala Sightseeing</h3>
+                        <p>Tibetan culture and spirituality</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Explore the rich Tibetan culture, monasteries, and spiritual sites of Dharamshala.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Dalai Lama Temple</h4>
+                            <p>Visit the residence of His Holiness</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Namgyal Monastery</h4>
+                            <p>Experience Tibetan Buddhist practices</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Bhagsu Waterfall</h4>
+                            <p>Hike to the beautiful natural waterfall</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">11</div>
+                    <div class="day-info">
+                        <h3>Triund Trek</h3>
+                        <p>Himalayan trekking adventure</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Embark on the famous Triund trek for spectacular views of Dhauladhar range.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Trek Start</h4>
+                            <p>Begin early morning trek from Galu Devi temple</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Summit Views</h4>
+                            <p>Enjoy 360-degree views of snow-capped peaks</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Camping Option</h4>
+                            <p>Optional overnight camping under stars</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">12</div>
+                    <div class="day-info">
+                        <h3>Dharamshala to Dalhousie</h3>
+                        <p>Journey to the Scottish hills of India</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Travel to the charming hill station of Dalhousie, known for its Scottish architecture.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Scenic Drive</h4>
+                            <p>Journey through beautiful Kangra valley</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Colonial Architecture</h4>
+                            <p>Explore Victorian-era buildings</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Evening Rest</h4>
+                            <p>Relax in the peaceful mountain town</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">13</div>
+                    <div class="day-info">
+                        <h3>Khajjiar - Mini Switzerland</h3>
+                        <p>The Switzerland of India</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Visit Khajjiar, often called Mini Switzerland for its meadows and dense forests.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Khajjiar Lake</h4>
+                            <p>Enjoy the saucer-shaped lake and meadows</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Adventure Activities</h4>
+                            <p>Paragliding, horse riding, and zorbing</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Khajji Nag Temple</h4>
+                            <p>Visit the ancient temple dedicated to serpent god</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">14</div>
+                    <div class="day-info">
+                        <h3>Dalhousie Local Sightseeing</h3>
+                        <p>Final exploration day</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Explore the remaining attractions of Dalhousie and enjoy leisurely walks.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>St. John's Church</h4>
+                            <p>Visit the oldest church in Dalhousie</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Panchpula</h4>
+                            <p>Enjoy the streams and waterfalls</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Shopping</h4>
+                            <p>Buy local handicrafts and souvenirs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">15</div>
+                    <div class="day-info">
+                        <h3>Dalhousie to Delhi</h3>
+                        <p>Journey back home</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Return journey to Delhi with beautiful memories of Himachal Pradesh.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Morning Departure</h4>
+                            <p>Check out and begin journey back to Delhi</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Photo Stops</h4>
+                            <p>Final photo opportunities en route</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Evening Arrival</h4>
+                            <p>Reach Delhi with unforgettable memories</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="highlights">
+        <h1 class="heading">Trip Highlights</h1>
+        <div class="highlights-grid">
+            <div class="highlight-card">
+                <div class="highlight-image" >
+                    <img src="images/rohtang-pass.jpg" alt="Rohtang Pass">
+                </div>
+                <div class="highlight-content">
+                    <h3>Rohtang Pass Adventure</h3>
+                    <p>Experience the thrill of high-altitude adventure at 13,050 feet with snow activities, stunning glacier views, and breathtaking mountain landscapes.</p>
+                </div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-image">
+                    <img src="images/dalai-lama-temple.jpg" alt="dalai-lama-temple">
+                </div>
+                <div class="highlight-content">
+                    <h3>Spiritual Journey</h3>
+                    <p>Visit the residence of Dalai Lama in Dharamshala, explore ancient temples, and experience the peaceful Tibetan Buddhist culture in McLeod Ganj.</p>
+                </div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-image">
+                    <img src="images/solang-valley-manali.jpg" alt="solang-valley-manali">
+                </div>
+                <div class="highlight-content">
+                    <h3>Adventure Sports</h3>
+                    <p>Enjoy paragliding in Solang Valley, trekking to Triund, river rafting, and various other adrenaline-pumping activities throughout the journey.</p>
+                </div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-image">
+                    <img src="images/Shimla-Kasauli.jpg" alt="Shimla-Kasauli">
+                </div>
+                <div class="highlight-content">
+                    <h3>Colonial Heritage</h3>
+                    <p>Explore the rich colonial architecture of Shimla, Kasauli, and Dalhousie with their historic churches, Victorian buildings, and British-era charm.</p>
+                </div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-image">
+                   <img src="images/Khajjiar.jpg" alt="Khajjiar">
+                </div>
+                <div class="highlight-content">
+                    <h3>Natural Beauty</h3>
+                    <p>Witness the pristine beauty of Khajjiar (Mini Switzerland), crystal clear lakes, dense forests, and panoramic mountain views throughout the trip.</p>
+                </div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-image">
+                    <img src="images/Kalka-Shimla-railway.jpg" alt="Kalka-Shimla">
+                </div>
+                <div class="highlight-content">
+                    <h3>UNESCO Toy Train</h3>
+                    <p>Experience the famous Kalka-Shimla railway, a UNESCO World Heritage site, with its scenic route through tunnels and beautiful mountain landscapes.</p>
+                </div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-image">
+                    <img src="images/natural hot springs of Vashisht and Manikaran.jpg" alt="natural hot springs of Vashisht and Manikaran">
+                </div>
+                <div class="highlight-content">
+                    <h3>Natural Hot Springs</h3>
+                    <p>Relax and rejuvenate in the natural hot springs of Vashisht and Manikaran, known for their therapeutic properties and spiritual significance in Hindu mythology.</p>
+                </div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-image">
+                    <img src="images/Mall Road.jpg" alt="mall-road">
+                </div>
+                <div class="highlight-content">
+                    <h3>Local Markets & Culture</h3>
+                    <p>Explore vibrant local markets of Mall Road, shop for authentic Himachali handicrafts, woolen items, and experience the warm hospitality of mountain people.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Package Inclusions Section -->
+    <section class="inclusions-section">
+        <h1 class="heading">Package Inclusions</h1>
+        
+        <!-- Visual Cards -->
+        <div class="inclusions-grid">
+            <div class="inclusion-card">
+                <div class="inclusion-icon">
+                    <i class="fas fa-bed" style="color: #219150;"></i>
+                </div>
+                <h3>Accommodation</h3>
+                <p>14 nights stay in comfortable 3-star hotels with breakfast included. Clean, well-maintained rooms with all basic amenities and scenic mountain views.</p>
+            </div>
+            <div class="inclusion-card">
+                <div class="inclusion-icon">
+                    <i class="fas fa-bus" style="color: #219150;"></i>
+                </div>
+                <h3>Transportation</h3>
+                <p>AC vehicle for entire journey including airport/railway station transfers. Experienced driver with knowledge of local routes and mountain driving.</p>
+            </div>
+            <div class="inclusion-card">
+                <div class="inclusion-icon">
+                    <i class="fas fa-utensils" style="color: #219150;"></i>
+                </div>
+                <h3>Meals</h3>
+                <p>Daily breakfast at hotels and selected meals during sightseeing. Experience local Himachali cuisine and popular North Indian dishes.</p>
+            </div>
+            <div class="inclusion-card">
+                <div class="inclusion-icon">
+                    <i class="fas fa-map-marked-alt" style="color: #219150;"></i>
+                </div>
+                <h3>Sightseeing</h3>
+                <p>All mentioned sightseeing with entry fees to major attractions included. Professional local guides available at key destinations for better experience.</p>
+            </div>
+            <div class="inclusion-card">
+                <div class="inclusion-icon">
+                    <i class="fas fa-skiing" style="color: #219150;"></i>
+                </div>
+                <h3>Adventure Activities</h3>
+                <p>Basic adventure activities like cable car rides, toy train journey, and selected outdoor activities. Additional adventure sports at discounted rates.</p>
+            </div>
+        </div>
+        
+        <!-- Inline Inclusions/Exclusions -->
+        <div style="max-width: 120rem; margin: 4rem auto 0; background: #f9f9f9; padding: 4rem; border-radius: 1rem; border: 0.2rem solid #10221b;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+                <div>
+                    <h3 style="color: #219150; margin-bottom: 2rem; font-size: 2.2rem; display: flex; align-items: center;"><i class="fas fa-check-circle" style="margin-right: 1rem;"></i>What's Included</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #219150; margin-right: 1rem; flex-shrink: 0;"></i>14 Nights Hotel Stay</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #219150; margin-right: 1rem; flex-shrink: 0;"></i>Daily Breakfast</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #219150; margin-right: 1rem; flex-shrink: 0;"></i>AC Transportation</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #219150; margin-right: 1rem; flex-shrink: 0;"></i>Professional Driver</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #219150; margin-right: 1rem; flex-shrink: 0;"></i>All Sightseeing</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #219150; margin-right: 1rem; flex-shrink: 0;"></i>Toy Train Ride</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #219150; margin-right: 1rem; flex-shrink: 0;"></i>Local Guide Services</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #219150; margin-right: 1rem; flex-shrink: 0;"></i>Entry Fees</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #219150; margin-right: 1rem; flex-shrink: 0;"></i>Travel Insurance</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #219150; margin-right: 1rem; flex-shrink: 0;"></i>24/7 Support</div>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="color: #e74c3c; margin-bottom: 2rem; font-size: 2.2rem; display: flex; align-items: center;"><i class="fas fa-times-circle" style="color: #e74c3c; margin-right: 1rem;"></i>What's Not Included</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Flight/Train Tickets</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Lunch & Dinner</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Personal Expenses</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Adventure Activities</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Rohtang Pass Permit</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Camera Fees</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Tips & Gratuities</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Shopping Items</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Medical Expenses</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Extra Services</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-section" id="booking">
+        <div class="booking-hero">
+            <h1>Ready for Your Himachal Adventure?</h1>
+            <p>Book your 15-day journey through the Land of Gods today and create memories that will last a lifetime. Limited seats available!</p>
+        </div>
+        
+        <div class="booking-container">
+            <div class="booking-form-container">
+                <h2><i class="fas fa-calendar-check" style="margin-right: 1rem;"></i>Book Your Trip</h2>
+                <form class="booking-form" onsubmit="handleBooking(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="First Name *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Last Name *" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number *" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="date" title="Preferred Travel Date" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Number of Travelers</option>
+                                <option value="1">1 Person</option>
+                                <option value="2">2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                                <option value="5">5 People</option>
+                                <option value="6">6+ People</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Select Package Type</option>
+                            <option value="standard">Standard Package - ₹24,999</option>
+                            <option value="deluxe">Deluxe Package - ₹27,999</option>
+                            <option value="premium">Premium Package - ₹29,999</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="4" placeholder="Special Requirements / Message (Optional)"></textarea>
+                    </div>
+                    <button type="submit" class="booking-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Book Now - Secure Your Spot!
+                    </button>
+                    <div class="booking-guarantee">
+                        <div class="guarantee-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure Booking</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>Best Price Guarantee</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-headset"></i>
+                            <span>24/7 Support</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="booking-features">
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <div class="feature-content">
+                        <h3>Instant Confirmation</h3>
+                        <p>Get immediate booking confirmation via email and SMS. Our team will contact you within 24 hours to finalize all details and provide complete travel documentation.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-user-shield"></i>
+                    <div class="feature-content">
+                        <h3>Experienced Team</h3>
+                        <p>Our experienced travel experts have been organizing Himachal trips for over 10 years. Professional drivers and local guides ensure your safety and memorable experience.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <div class="feature-content">
+                        <h3>Flexible Payment</h3>
+                        <p>Pay just 30% advance to confirm your booking. Balance payment can be made before departure. Multiple payment options available including UPI, cards, and bank transfer.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-sync-alt"></i>
+                    <div class="feature-content">
+                        <h3>Free Cancellation</h3>
+                        <p>Cancel up to 15 days before departure with full refund. We understand plans can change, so we offer flexible cancellation and rescheduling policies for your convenience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; created by Sagar Bisht | all rights reserved!</p>
+    </footer>
+
+    <script>
+        function handleBooking(event) {
+            event.preventDefault();
+            
+            // Collect form data
+            const formData = new FormData(event.target);
+            const bookingData = {};
+            
+            // Get all form inputs
+            const inputs = event.target.querySelectorAll('input, select, textarea');
+            inputs.forEach(input => {
+                if (input.value.trim()) {
+                    bookingData[input.placeholder || input.name] = input.value;
+                }
+            });
+            
+            // Show confirmation message
+            alert('Thank you for your booking request! 🏔️\n\nWe have received your details and our travel expert will contact you within 24 hours to confirm your Himachal Pradesh adventure.\n\nBooking Reference: HP' + Date.now() + '\n\nGet ready for an amazing journey!');
+            
+            // Reset form
+            event.target.reset();
+            
+            // In a real application, you would send this data to your backend
+            console.log('Booking Data:', bookingData);
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        window.addEventListener('scroll', () => {
+            const cards = document.querySelectorAll('.day-card, .highlight-card, .inclusion-card');
+            cards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                const cardVisible = 150;
+                
+                if (cardTop < window.innerHeight - cardVisible) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        // Initialize cards with animation styles
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.day-card, .highlight-card, .inclusion-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = `all 0.6s ease`;
+            });
+        });
+    </script>
+
+</body>
+</html>
