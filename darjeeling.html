@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darjeeling Package - 10 Days Trip</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+
+        * {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: 0.2s linear;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            scroll-padding-top: 5rem;
+        }
+
+        section {
+            padding: 5rem 9%;
+        }
+
+        .fa-solid, .fas {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #28a745;
+        }
+
+        .btn {
+            margin-top: 1rem;
+            display: inline-block;
+            border: 0.35rem solid transparent;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            background: none;
+            font-size: 1.7rem;
+            padding: 1.5rem 3rem;
+            border-radius: 80px;
+        }
+
+        .btn:hover {
+            background: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            font-size: 4rem;
+            color: #1a5c3a;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem 9%;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            background: #fff;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        }
+
+        .header .logo {
+            margin-right: auto;
+            font-size: 2.5rem;
+            color: black;
+            font-weight: bolder;
+        }
+
+        .header .navbar a {
+            margin-left: 2rem;
+            font-size: 1.7rem;
+            color: black;
+        }
+
+        .header .navbar a:hover {
+            color: #28a745;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://assets.zeezest.com/blogs/PROD_Must-Visit%20Places%20in%20Darjeeling%20for%20a%20Perfect%20Hill%20Station%20Getaway%20%281%29_1736950794086.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 6rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-content p {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            max-width: 80rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        .package-overview {
+            background: #f8f9fa;
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .overview-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            border: 0.2rem solid #1a5c3a;
+        }
+
+        .overview-card i {
+            font-size: 4rem;
+            color: #28a745;
+            margin-bottom: 1rem;
+        }
+
+        .overview-card h3 {
+            font-size: 2rem;
+            color: #1a5c3a;
+            margin-bottom: 1rem;
+        }
+
+        .overview-card p {
+            font-size: 1.5rem;
+            color: #666;
+        }
+
+        .itinerary {
+            background: #fff;
+        }
+
+        .itinerary-container {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .day-card {
+            background: #f9f9f9;
+            border: 0.2rem solid #1a5c3a;
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .day-card:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+        }
+
+        .day-header {
+            background: linear-gradient(135deg, #28a745, #1a5c3a);
+            color: white;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .day-number {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            width: 6rem;
+            height: 6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .day-info h3 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .day-info p {
+            font-size: 1.4rem;
+            opacity: 0.9;
+        }
+
+        .day-content {
+            padding: 2rem;
+        }
+
+        .activities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .activity {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border-left: 0.4rem solid #28a745;
+        }
+
+        .activity h4 {
+            color: #1a5c3a;
+            margin-bottom: 0.5rem;
+            font-size: 1.6rem;
+        }
+
+        .activity p {
+            color: #666;
+            font-size: 1.3rem;
+            line-height: 1.6;
+        }
+
+        .highlights {
+            background: #f8f9fa;
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+            gap: 2rem;
+        }
+
+        .highlight-card {
+            background: #fff;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            border: 0.2rem solid #1a5c3a;
+        }
+
+        .highlight-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .highlight-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .highlight-image img:hover {
+            transform: scale(1.05);
+        }
+
+        .highlight-content {
+            padding: 2rem;
+        }
+
+        .highlight-content h3 {
+            font-size: 2rem;
+            color: #1a5c3a;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-content p {
+            font-size: 1.4rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .pricing-section {
+            background: #fff;
+            text-align: center;
+        }
+
+        .pricing-card {
+            max-width: 50rem;
+            margin: 0 auto;
+            background: #f9f9f9;
+            border: 0.2rem solid #1a5c3a;
+            border-radius: 1rem;
+            padding: 3rem;
+        }
+
+        .price-display {
+            font-size: 4rem;
+            color: #28a745;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+
+        .inclusions {
+            text-align: left;
+            margin-bottom: 3rem;
+        }
+
+        .inclusions h3 {
+            font-size: 2rem;
+            color: #1a5c3a;
+            margin-bottom: 1rem;
+        }
+
+        .inclusions ul {
+            list-style: none;
+        }
+
+        .inclusions li {
+            padding: 0.5rem 0;
+            font-size: 1.4rem;
+            color: #666;
+        }
+
+        .inclusions li i {
+            color: #28a745;
+            margin-right: 1rem;
+        }
+
+        .inclusions-section {
+            background: #fff;
+        }
+
+        .inclusions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+            gap: 2rem;
+        }
+
+        .inclusion-card {
+            background: #f9f9f9;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-radius: 1rem;
+            border: 0.2rem solid #1a5c3a;
+            transition: transform 0.3s ease;
+        }
+
+        .inclusion-card:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+        }
+
+        .inclusion-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .inclusion-card h3 {
+            font-size: 2rem;
+            color: #1a5c3a;
+            margin-bottom: 1rem;
+        }
+
+        .inclusion-card p {
+            font-size: 1.4rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .booking-section {
+            background: linear-gradient(135deg, #28a745, #1a5c3a);
+            color: white;
+            padding: 6rem 9%;
+        }
+
+        .booking-hero {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .booking-hero h1 {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        .booking-hero p {
+            font-size: 1.8rem;
+            max-width: 80rem;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .booking-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            max-width: 120rem;
+            margin: 0 auto;
+        }
+
+        .booking-form-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 1rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .booking-form-container h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: white;
+            text-align: center;
+        }
+
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1.2rem;
+            border: none;
+            border-radius: 0.5rem;
+            background: rgba(255, 255, 255, 0.9);
+            font-size: 1.4rem;
+            color: #333;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+        }
+
+        .booking-btn {
+            background: white;
+            color: #1a5c3a;
+            border: none;
+            padding: 1.5rem 3rem;
+            font-size: 1.8rem;
+            font-weight: bold;
+            border-radius: 5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .booking-btn:hover {
+            transform: translateY(-0.2rem);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+            background: #f0f0f0;
+        }
+
+        .booking-guarantee {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .guarantee-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.2rem;
+            color: white;
+            opacity: 0.9;
+        }
+
+        .guarantee-item i {
+            color: #28a745;
+        }
+
+        .booking-features {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        .feature i {
+            font-size: 3rem;
+            color: white;
+            opacity: 0.8;
+        }
+
+        .feature-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .feature-content p {
+            font-size: 1.4rem;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .footer {
+            background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #1a5c3a;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .footer p {
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 991px) {
+            html {
+                font-size: 55%;
+            }
+            
+            .hero-content h1 {
+                font-size: 4rem;
+            }
+
+            .booking-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .day-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .activities {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .booking-section {
+                padding: 4rem 5%;
+            }
+
+            .inclusions-grid {
+                grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            }
+
+            .booking-guarantee {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .guarantee-item {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 450px) {
+            html {
+                font-size: 50%;
+            }
+            
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo"><i class="fas fa-hiking"></i> travel.com</a>
+        <nav class="navbar">
+            <a href="index.html#home">home</a>
+            <a href="index.html#category">Adventures</a>
+            <a href="index.html#packages">packages</a>
+            <a href="index.html#contact">contact</a>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Darjeeling – Queen of Hills</h1>
+            <p>10 Days Ultimate Journey Through the Queen of Hills - Experience the perfect blend of tea gardens, mountain railways, and Himalayan views in the heart of Northeast India</p>
+            <div class="price-display">Rs 19,999 - Rs 24,999</div>
+            <a href="#package-details" class="btn">View Details</a>
+        </div>
+    </section>
+
+    <section class="package-overview" id="package-details">
+        <h1 class="heading">Package Overview</h1>
+        <div class="overview-grid">
+            <div class="overview-card">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Duration</h3>
+                <p>10 Days / 9 Nights</p>
+            </div>
+            <div class="overview-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Destinations</h3>
+                <p>6+ Beautiful Locations</p>
+            </div>
+            <div class="overview-card">
+                <i class="fas fa-mountain"></i>
+                <h3>Activities</h3>
+                <p>Tea Gardens & Sightseeing</p>
+            </div>
+            <div class="overview-card">
+                <i class="fas fa-users"></i>
+                <h3>Group Size</h3>
+                <p>2-12 People</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="itinerary">
+        <h1 class="heading">10-Day Detailed Itinerary</h1>
+        <div class="itinerary-container">
+            
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">01</div>
+                    <div class="day-info">
+                        <h3>Delhi to Bagdogra to Darjeeling</h3>
+                        <p>Journey begins to the Queen of Hills</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Start your Darjeeling adventure with a flight to Bagdogra followed by a scenic drive to Darjeeling through winding mountain roads.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Morning Flight</h4>
+                            <p>Fly from Delhi to Bagdogra Airport</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Mountain Drive</h4>
+                            <p>Scenic 3-hour drive to Darjeeling via tea estates</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Check-in & Rest</h4>
+                            <p>Arrive in Darjeeling and check into hotel</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">02</div>
+                    <div class="day-info">
+                        <h3>Darjeeling Sunrise & City Tour</h3>
+                        <p>Sunrise at Tiger Hill</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Early morning visit to Tiger Hill for spectacular sunrise over Mt. Kanchenjunga followed by city sightseeing.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Tiger Hill Sunrise</h4>
+                            <p>Witness breathtaking sunrise over Kanchenjunga</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Ghoom Monastery</h4>
+                            <p>Visit the famous Buddhist monastery</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Toy Train Ride</h4>
+                            <p>Experience the UNESCO World Heritage railway</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">03</div>
+                    <div class="day-info">
+                        <h3>Darjeeling Local Sightseeing</h3>
+                        <p>Tea gardens and cultural sites</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Explore Darjeeling's famous tea gardens, cultural landmarks, and enjoy panoramic mountain views.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Tea Garden Visit</h4>
+                            <p>Tour famous tea estates and learn tea processing</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Padmaja Naidu Zoo</h4>
+                            <p>See rare Himalayan animals including snow leopards</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Mall Road Shopping</h4>
+                            <p>Shop for Darjeeling tea and local handicrafts</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">04</div>
+                    <div class="day-info">
+                        <h3>Darjeeling to Gangtok</h3>
+                        <p>Journey to Sikkim's capital</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Travel to Gangtok, the beautiful capital of Sikkim, through scenic mountain roads and lush valleys.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Scenic Drive</h4>
+                            <p>4-hour journey through beautiful landscapes</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Teesta River Views</h4>
+                            <p>Enjoy views of the sacred Teesta River</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Gangtok Check-in</h4>
+                            <p>Settle into hotel in Sikkim's capital</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">05</div>
+                    <div class="day-info">
+                        <h3>Tsomgo Lake & Baba Mandir</h3>
+                        <p>Sacred lake and spiritual site</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Visit the stunning glacial Tsomgo Lake and the revered Baba Harbhajan Singh Mandir.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Tsomgo Lake</h4>
+                            <p>Sacred glacial lake at 12,313 feet altitude</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Baba Mandir</h4>
+                            <p>Visit the shrine of soldier Baba Harbhajan Singh</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Yak Riding</h4>
+                            <p>Experience traditional yak rides (seasonal)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">06</div>
+                    <div class="day-info">
+                        <h3>Gangtok City Tour</h3>
+                        <p>Monasteries and cultural sites</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Explore Gangtok's beautiful monasteries, gardens, and cultural attractions with panoramic mountain views.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Rumtek Monastery</h4>
+                            <p>Visit the largest monastery in Sikkim</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Namgyal Institute</h4>
+                            <p>Learn about Tibetan culture and traditions</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Flower Exhibition Centre</h4>
+                            <p>See exotic Himalayan flowers and orchids</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">07</div>
+                    <div class="day-info">
+                        <h3>Gangtok to Pelling</h3>
+                        <p>Journey to West Sikkim</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Travel to Pelling, a charming hill station in West Sikkim known for its stunning views of Kanchenjunga.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Mountain Drive</h4>
+                            <p>Scenic journey through forests and valleys</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Kanchenjunga Views</h4>
+                            <p>First glimpses of the world's third highest peak</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Evening Rest</h4>
+                            <p>Check into hotel with mountain views</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">08</div>
+                    <div class="day-info">
+                        <h3>Pelling Sightseeing</h3>
+                        <p>Monasteries and waterfalls</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Explore Pelling's ancient monasteries, stunning waterfalls, and enjoy spectacular mountain panoramas.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Pemayangtse Monastery</h4>
+                            <p>Visit the 300-year-old Buddhist monastery</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Kanchenjunga Falls</h4>
+                            <p>Marvel at the spectacular waterfall</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Sangachoeling Monastery</h4>
+                            <p>Hike to the second oldest monastery in Sikkim</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">09</div>
+                    <div class="day-info">
+                        <h3>Pelling to Bagdogra</h3>
+                        <p>Journey back to plains</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Return journey to Bagdogra airport through the beautiful mountain roads for your onward flight.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Final Mountain Views</h4>
+                            <p>Last glimpses of the Himalayas</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Tea Estate Drive</h4>
+                            <p>Pass through more tea gardens en route</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Airport Check-in</h4>
+                            <p>Prepare for flight back to Delhi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">10</div>
+                    <div class="day-info">
+                        <h3>Bagdogra to Delhi</h3>
+                        <p>Journey back home</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Final day of your memorable Darjeeling and Sikkim adventure with flight back to Delhi.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Morning Flight</h4>
+                            <p>Departure from Bagdogra to Delhi</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Souvenir Shopping</h4>
+                            <p>Last minute shopping at airport</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Delhi Arrival</h4>
+                            <p>Reach Delhi with unforgettable memories</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="highlights">
+        <h1 class="heading">Trip Highlights</h1>
+        <div class="highlights-grid">
+            <div class="highlight-card">
+                <div class="highlight-image">
+                    <img src="https://s7ap1.scene7.com/is/image/incredibleindia/tiger-hill-darjeeling-west-bengal-2-attr-hero?qlt=82&ts=1726643281440" alt="Tiger Hill Sunrise">
+                </div>
+                <div class="highlight-content">
+                    <h3>Tiger Hill Sunrise</h3>
+                    <p>Witness the magical sunrise over Mt. Kanchenjunga from Tiger Hill, one of the most spectacular sunrise viewpoints in the world at 8,482 feet altitude.</p>
+                </div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-image">
+                    <img src="https://zyanna.com/cdn/shop/articles/zyanna-the-beauty-of-indian-tea-gardens-a-visual-symphony-of-nature-and-culture.jpg?v=1718643706" alt="Darjeeling Tea Gardens">
+                </div>
+                <div class="highlight-content">
+                    <h3>Tea Garden Experience</h3>
+                    <p>Explore the world-famous Darjeeling tea estates, learn about tea processing, and taste the finest teas while enjoying panoramic Himalayan views.</p>
+                </div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-image">
+                    <img src="https://en-media.thebetterindia.com/uploads/2025/03/Untitled-design-15_11zon-1741355546.jpg" alt="Darjeeling Toy Train">
+                </div>
+                <div class="highlight-content">
+                    <h3>UNESCO Toy Train</h3>
+                    <p>Experience the historic Darjeeling Himalayan Railway, a UNESCO World Heritage site, on a scenic journey through mountains and tea gardens.</p>
+                </div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-image">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/cd/ac/a3/tsomgo-lake.jpg?w=1200&h=-1&s=1" alt="Tsomgo Lake">
+                </div>
+                <div class="highlight-content">
+                    <h3>Tsomgo Lake</h3>
+                    <p>Visit the sacred glacial lake at 12,313 feet, surrounded by snow-capped mountains and considered holy by both Buddhists and Hindus.</p>
+                </div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-image">
+                    <img src="https://www.sterlingholidays.com/activities/darjeeling/mustsee/bannerimage/darjeeling-yiga-choeling.jpg.imgw.1280.1280.jpeg" alt="Buddhist Monasteries">
+                </div>
+                <div class="highlight-content">
+                    <h3>Buddhist Monasteries</h3>
+                    <p>Explore ancient Buddhist monasteries including Rumtek, Pemayangtse, and Ghoom, experiencing peaceful spirituality and Tibetan culture.</p>
+                </div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-image">
+                    <img src="https://www.nomadicweekends.com/wp-content/uploads/2018/12/kunchenjungha.jpg" alt="Kanchenjunga Views">
+                </div>
+                <div class="highlight-content">
+                    <h3>Kanchenjunga Views</h3>
+                    <p>Marvel at the world's third highest peak Mt. Kanchenjunga (28,169 ft) from multiple viewpoints throughout your journey in Darjeeling and Sikkim.</p>
+                </div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-image">
+                    <img src="https://s7ap1.scene7.com/is/image/incredibleindia/tsomgo-lake-gangtok-sikkim-2-attr-hero?qlt=82&ts=1742154563107" alt="Gangtok City">
+                </div>
+                <div class="highlight-content">
+                    <h3>Gangtok Exploration</h3>
+                    <p>Discover Sikkim's charming capital with its clean streets, vibrant markets, beautiful gardens, and stunning mountain backdrop.</p>
+                </div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-image">
+                    <img src="https://i0.wp.com/www.tusktravel.com/blog/wp-content/uploads/2023/05/Hemis-Festival-Nepal.jpg?resize=1025%2C620&ssl=1" alt="Local Culture">
+                </div>
+                <div class="highlight-content">
+                    <h3>Rich Cultural Heritage</h3>
+                    <p>Experience the unique blend of Nepali, Tibetan, and Bengali cultures through local festivals, cuisine, handicrafts, and warm hospitality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Package Inclusions Section -->
+    <section class="inclusions-section">
+        <h1 class="heading">Package Inclusions</h1>
+        
+        <!-- Visual Cards -->
+        <div class="inclusions-grid">
+            <div class="inclusion-card">
+                <div class="inclusion-icon">
+                    <i class="fas fa-bed" style="color: #28a745;"></i>
+                </div>
+                <h3>Accommodation</h3>
+                <p>9 nights stay in comfortable 3-star hotels with breakfast included. Clean, well-maintained rooms with mountain views and all basic amenities.</p>
+            </div>
+            <div class="inclusion-card">
+                <div class="inclusion-icon">
+                    <i class="fas fa-plane" style="color: #28a745;"></i>
+                </div>
+                <h3>Flights</h3>
+                <p>Round trip flights from Delhi to Bagdogra included. All airport transfers and assistance provided for a hassle-free journey.</p>
+            </div>
+            <div class="inclusion-card">
+                <div class="inclusion-icon">
+                    <i class="fas fa-car" style="color: #28a745;"></i>
+                </div>
+                <h3>Transportation</h3>
+                <p>AC vehicle for entire journey including all sightseeing and transfers. Experienced driver familiar with mountain roads and local routes.</p>
+            </div>
+            <div class="inclusion-card">
+                <div class="inclusion-icon">
+                    <i class="fas fa-utensils" style="color: #28a745;"></i>
+                </div>
+                <h3>Meals</h3>
+                <p>Daily breakfast at hotels and selected meals during sightseeing. Experience authentic local cuisine including momos, thukpa, and Darjeeling tea.</p>
+            </div>
+            <div class="inclusion-card">
+                <div class="inclusion-icon">
+                    <i class="fas fa-map-marked-alt" style="color: #28a745;"></i>
+                </div>
+                <h3>Sightseeing</h3>
+                <p>All mentioned sightseeing with entry fees included. Professional local guides at major attractions for better cultural understanding.</p>
+            </div>
+        </div>
+        
+        <!-- Inline Inclusions/Exclusions -->
+        <div style="max-width: 120rem; margin: 4rem auto 0; background: #f9f9f9; padding: 4rem; border-radius: 1rem; border: 0.2rem solid #1a5c3a;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+                <div>
+                    <h3 style="color: #28a745; margin-bottom: 2rem; font-size: 2.2rem; display: flex; align-items: center;"><i class="fas fa-check-circle" style="margin-right: 1rem;"></i>What's Included</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #28a745; margin-right: 1rem; flex-shrink: 0;"></i>9 Nights Hotel Stay</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #28a745; margin-right: 1rem; flex-shrink: 0;"></i>Daily Breakfast</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #28a745; margin-right: 1rem; flex-shrink: 0;"></i>Round Trip Flights</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #28a745; margin-right: 1rem; flex-shrink: 0;"></i>AC Transportation</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #28a745; margin-right: 1rem; flex-shrink: 0;"></i>All Sightseeing</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #28a745; margin-right: 1rem; flex-shrink: 0;"></i>Toy Train Ride</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #28a745; margin-right: 1rem; flex-shrink: 0;"></i>Local Guide Services</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #28a745; margin-right: 1rem; flex-shrink: 0;"></i>Entry Fees</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #28a745; margin-right: 1rem; flex-shrink: 0;"></i>Sikkim Permits</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #28a745; margin-right: 1rem; flex-shrink: 0;"></i>24/7 Support</div>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="color: #e74c3c; margin-bottom: 2rem; font-size: 2.2rem; display: flex; align-items: center;"><i class="fas fa-times-circle" style="color: #e74c3c; margin-right: 1rem;"></i>What's Not Included</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Lunch & Dinner</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Personal Expenses</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Travel Insurance</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Extra Activities</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Photography Fees</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Tips & Gratuities</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Laundry Services</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Shopping Items</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Medical Expenses</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Room Service</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-section" id="booking">
+        <div class="booking-hero">
+            <h1>Ready for Your Darjeeling Adventure?</h1>
+            <p>Book your 10-day journey through the Queen of Hills today and create memories that will last a lifetime. Limited seats available!</p>
+        </div>
+        
+        <div class="booking-container">
+            <div class="booking-form-container">
+                <h2><i class="fas fa-calendar-check" style="margin-right: 1rem;"></i>Book Your Trip</h2>
+                <form class="booking-form" onsubmit="handleBooking(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="First Name *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Last Name *" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number *" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="date" title="Preferred Travel Date" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Number of Travelers</option>
+                                <option value="1">1 Person</option>
+                                <option value="2">2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                                <option value="5">5 People</option>
+                                <option value="6">6+ People</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Select Package Type</option>
+                            <option value="standard">Standard Package - ₹19,999</option>
+                            <option value="deluxe">Deluxe Package - ₹22,999</option>
+                            <option value="premium">Premium Package - ₹24,999</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="4" placeholder="Special Requirements / Message (Optional)"></textarea>
+                    </div>
+                    <button type="submit" class="booking-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Book Now - Secure Your Spot!
+                    </button>
+                    <div class="booking-guarantee">
+                        <div class="guarantee-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure Booking</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>Best Price Guarantee</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-headset"></i>
+                            <span>24/7 Support</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="booking-features">
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <div class="feature-content">
+                        <h3>Instant Confirmation</h3>
+                        <p>Get immediate booking confirmation via email and SMS. Our team will contact you within 24 hours to finalize all details and provide complete travel documentation.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-user-shield"></i>
+                    <div class="feature-content">
+                        <h3>Experienced Team</h3>
+                        <p>Our experienced travel experts specialize in Northeast India tours for over 8 years. Professional drivers and local guides ensure your safety and memorable experience.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <div class="feature-content">
+                        <h3>Flexible Payment</h3>
+                        <p>Pay just 30% advance to confirm your booking. Balance payment can be made before departure. Multiple payment options available including UPI, cards, and bank transfer.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-sync-alt"></i>
+                    <div class="feature-content">
+                        <h3>Free Cancellation</h3>
+                        <p>Cancel up to 15 days before departure with full refund. We understand plans can change, so we offer flexible cancellation and rescheduling policies for your convenience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; created by Sagar Bisht | all rights reserved!</p>
+    </footer>
+
+    <script>
+        function handleBooking(event) {
+            event.preventDefault();
+            
+            // Collect form data
+            const formData = new FormData(event.target);
+            const bookingData = {};
+            
+            // Get all form inputs
+            const inputs = event.target.querySelectorAll('input, select, textarea');
+            inputs.forEach(input => {
+                if (input.value.trim()) {
+                    bookingData[input.placeholder || input.name] = input.value;
+                }
+            });
+            
+            // Show confirmation message
+            alert('Thank you for your booking request! 🏔️\n\nWe have received your details and our travel expert will contact you within 24 hours to confirm your Darjeeling & Sikkim adventure.\n\nBooking Reference: DJ' + Date.now() + '\n\nGet ready for an amazing journey through tea gardens and mountains!');
+            
+            // Reset form
+            event.target.reset();
+            
+            // In a real application, you would send this data to your backend
+            console.log('Booking Data:', bookingData);
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        window.addEventListener('scroll', () => {
+            const cards = document.querySelectorAll('.day-card, .highlight-card, .inclusion-card');
+            cards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                const cardVisible = 150;
+                
+                if (cardTop < window.innerHeight - cardVisible) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        // Initialize cards with animation styles
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.day-card, .highlight-card, .inclusion-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = `all 0.6s ease`;
+            });
+        });
+    </script>
+
+</body>
+</html>

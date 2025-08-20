@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>West Bengal Package - 7 Days Trip</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+
+        * {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: none;
+            text-decoration: none;
+            text-transform: capitalize;
+            transition: 0.2s linear;
+        }
+
+        html {
+            font-size: 62.5%;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            scroll-padding-top: 5rem;
+        }
+
+        section {
+            padding: 5rem 9%;
+        }
+
+        .fa-solid, .fas {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #228B22;
+        }
+
+        .btn {
+            margin-top: 1rem;
+            display: inline-block;
+            border: 0.35rem solid transparent;
+            color: rgb(255, 255, 255);
+            cursor: pointer;
+            background: none;
+            font-size: 1.7rem;
+            padding: 1.5rem 3rem;
+            border-radius: 80px;
+        }
+
+        .btn:hover {
+            background: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            font-size: 4rem;
+            color: #2c5530;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem 9%;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            background: #fff;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        }
+
+        .header .logo {
+            margin-right: auto;
+            font-size: 2.5rem;
+            color: black;
+            font-weight: bolder;
+        }
+
+        .header .navbar a {
+            margin-left: 2rem;
+            font-size: 1.7rem;
+            color: black;
+        }
+
+        .header .navbar a:hover {
+            color: #228B22;
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://c4.wallpaperflare.com/wallpaper/5/832/42/bridge-lights-river-the-evening-wallpaper-preview.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 6rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-content p {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            max-width: 80rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+
+        .package-overview {
+            background: #f0f8f0;
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .overview-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            border: 0.2rem solid #2c5530;
+        }
+
+        .overview-card i {
+            font-size: 4rem;
+            color: #228B22;
+            margin-bottom: 1rem;
+        }
+
+        .overview-card h3 {
+            font-size: 2rem;
+            color: #2c5530;
+            margin-bottom: 1rem;
+        }
+
+        .overview-card p {
+            font-size: 1.5rem;
+            color: #666;
+        }
+
+        .itinerary {
+            background: #fff;
+        }
+
+        .itinerary-container {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .day-card {
+            background: #f9f9f9;
+            border: 0.2rem solid #2c5530;
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .day-card:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+        }
+
+        .day-header {
+            background: linear-gradient(135deg, #228B22, #1e6b1e);
+            color: white;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .day-number {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            width: 6rem;
+            height: 6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .day-info h3 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .day-info p {
+            font-size: 1.4rem;
+            opacity: 0.9;
+        }
+
+        .day-content {
+            padding: 2rem;
+        }
+
+        .activities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .activity {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            border-left: 0.4rem solid #228B22;
+        }
+
+        .activity h4 {
+            color: #2c5530;
+            margin-bottom: 0.5rem;
+            font-size: 1.6rem;
+        }
+
+        .activity p {
+            color: #666;
+            font-size: 1.3rem;
+            line-height: 1.6;
+        }
+
+        .highlights {
+            background: #f0f8f0;
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+            gap: 2rem;
+        }
+
+        .highlight-card {
+            background: #fff;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            border: 0.2rem solid #2c5530;
+        }
+
+        .highlight-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .highlight-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .highlight-image img:hover {
+            transform: scale(1.05);
+        }
+
+        .highlight-content {
+            padding: 2rem;
+        }
+
+        .highlight-content h3 {
+            font-size: 2rem;
+            color: #2c5530;
+            margin-bottom: 1rem;
+        }
+
+        .highlight-content p {
+            font-size: 1.4rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .pricing-section {
+            background: #fff;
+            text-align: center;
+        }
+
+        .pricing-card {
+            max-width: 50rem;
+            margin: 0 auto;
+            background: #f9f9f9;
+            border: 0.2rem solid #2c5530;
+            border-radius: 1rem;
+            padding: 3rem;
+        }
+
+        .price-display {
+            font-size: 4rem;
+            color: #228B22;
+            font-weight: bold;
+            margin-bottom: 2rem;
+        }
+
+        .inclusions-section {
+            background: #fff;
+        }
+
+        .inclusions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+            gap: 2rem;
+        }
+
+        .inclusion-card {
+            background: #f9f9f9;
+            padding: 3rem 2rem;
+            text-align: center;
+            border-radius: 1rem;
+            border: 0.2rem solid #2c5530;
+            transition: transform 0.3s ease;
+        }
+
+        .inclusion-card:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+        }
+
+        .inclusion-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .inclusion-card h3 {
+            font-size: 2rem;
+            color: #2c5530;
+            margin-bottom: 1rem;
+        }
+
+        .inclusion-card p {
+            font-size: 1.4rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .booking-section {
+            background: linear-gradient(135deg, #228B22, #1e6b1e);
+            color: white;
+            padding: 6rem 9%;
+        }
+
+        .booking-hero {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .booking-hero h1 {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        .booking-hero p {
+            font-size: 1.8rem;
+            max-width: 80rem;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .booking-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            max-width: 120rem;
+            margin: 0 auto;
+        }
+
+        .booking-form-container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 1rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .booking-form-container h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: white;
+            text-align: center;
+        }
+
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1.2rem;
+            border: none;
+            border-radius: 0.5rem;
+            background: rgba(255, 255, 255, 0.9);
+            font-size: 1.4rem;
+            color: #333;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+        }
+
+        .booking-btn {
+            background: white;
+            color: #2c5530;
+            border: none;
+            padding: 1.5rem 3rem;
+            font-size: 1.8rem;
+            font-weight: bold;
+            border-radius: 5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .booking-btn:hover {
+            transform: translateY(-0.2rem);
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+            background: #f0f0f0;
+        }
+
+        .booking-guarantee {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .guarantee-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.2rem;
+            color: white;
+            opacity: 0.9;
+        }
+
+        .guarantee-item i {
+            color: #228B22;
+        }
+
+        .booking-features {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+        }
+
+        .feature i {
+            font-size: 3rem;
+            color: white;
+            opacity: 0.8;
+        }
+
+        .feature-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .feature-content p {
+            font-size: 1.4rem;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .footer {
+            background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #2c5530;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .footer p {
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 991px) {
+            html {
+                font-size: 55%;
+            }
+            
+            .hero-content h1 {
+                font-size: 4rem;
+            }
+
+            .booking-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .day-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .activities {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .booking-section {
+                padding: 4rem 5%;
+            }
+
+            .inclusions-grid {
+                grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            }
+
+            .booking-guarantee {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .guarantee-item {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 450px) {
+            html {
+                font-size: 50%;
+            }
+            
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo"><i class="fas fa-hiking"></i> travel.com</a>
+        <nav class="navbar">
+            <a href="index.html#home">home</a>
+            <a href="index.html#category">Adventures</a>
+            <a href="index.html#packages">packages</a>
+            <a href="index.html#contact">contact</a>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>West Bengal</h1>
+            <p>7 Days Cultural & Heritage Journey Through the Land of Rabindranath Tagore - Experience the rich heritage, spiritual essence, and natural beauty of Bengal</p>
+            <div class="price-display">Rs 12,999 - Rs 16,999</div>
+            <a href="#package-details" class="btn">View Details</a>
+        </div>
+    </section>
+
+    <section class="package-overview" id="package-details">
+        <h1 class="heading">Package Overview</h1>
+        <div class="overview-grid">
+            <div class="overview-card">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Duration</h3>
+                <p>7 Days / 6 Nights</p>
+            </div>
+            <div class="overview-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Destinations</h3>
+                <p>5+ Beautiful Locations</p>
+            </div>
+            <div class="overview-card">
+                <i class="fas fa-theater-masks"></i>
+                <h3>Activities</h3>
+                <p>Culture & Heritage Tour</p>
+            </div>
+            <div class="overview-card">
+                <i class="fas fa-users"></i>
+                <h3>Group Size</h3>
+                <p>2-12 People</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="itinerary">
+        <h1 class="heading">7-Day Detailed Itinerary</h1>
+        <div class="itinerary-container">
+            
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">01</div>
+                    <div class="day-info">
+                        <h3>Arrival in Kolkata</h3>
+                        <p>Welcome to the City of Joy</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Arrive in Kolkata, the cultural capital of India, and begin your journey through the rich heritage of Bengal.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Airport Pickup</h4>
+                            <p>Transfer to hotel and check-in process</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Victoria Memorial</h4>
+                            <p>Visit the iconic white marble monument</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Maidan Evening Walk</h4>
+                            <p>Stroll through Kolkata's green lung</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">02</div>
+                    <div class="day-info">
+                        <h3>Kolkata Heritage Tour</h3>
+                        <p>Colonial architecture and spiritual sites</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Explore Kolkata's colonial heritage, ancient temples, and cultural landmarks.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Howrah Bridge</h4>
+                            <p>Marvel at the engineering wonder without nuts and bolts</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Dakshineswar Temple</h4>
+                            <p>Visit the famous Kali temple by the Hooghly river</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Park Street</h4>
+                            <p>Experience Kolkata's nightlife and food scene</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">03</div>
+                    <div class="day-info">
+                        <h3>Kolkata to Shantiniketan</h3>
+                        <p>Journey to Tagore's university town</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Travel to Shantiniketan, the abode of peace created by Rabindranath Tagore.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Visva-Bharati University</h4>
+                            <p>Explore Tagore's vision of ideal education</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Tagore's House</h4>
+                            <p>Visit the poet's residence and museum</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Kala Bhavana</h4>
+                            <p>Art college showcasing Bengali artistic heritage</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">04</div>
+                    <div class="day-info">
+                        <h3>Shantiniketan to Mayurbhanj</h3>
+                        <p>Terracotta temples and rural Bengal</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Discover the terracotta temples and rural charm of Mayurbhanj district.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Bishnupur Temples</h4>
+                            <p>Marvel at intricate terracotta temple architecture</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Local Handicrafts</h4>
+                            <p>Watch artisans create beautiful terracotta items</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Village Life Experience</h4>
+                            <p>Interact with local communities and traditions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">05</div>
+                    <div class="day-info">
+                        <h3>Journey to Sundarbans</h3>
+                        <p>World's largest mangrove forest</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Head to the Sundarbans, UNESCO World Heritage site and home to Royal Bengal Tigers.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Boat Safari</h4>
+                            <p>Navigate through mangrove channels</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Tiger Spotting</h4>
+                            <p>Look for the elusive Royal Bengal Tiger</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Bird Watching</h4>
+                            <p>Spot various migratory and local bird species</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">06</div>
+                    <div class="day-info">
+                        <h3>Sundarbans Exploration</h3>
+                        <p>Deep forest adventure</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Full day exploring the unique ecosystem of Sundarbans mangrove forests.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>Sajnekhali Watchtower</h4>
+                            <p>Panoramic views of the forest and wildlife</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Crocodile Spotting</h4>
+                            <p>See saltwater crocodiles in their habitat</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Cultural Program</h4>
+                            <p>Evening folk dance and music performance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">07</div>
+                    <div class="day-info">
+                        <h3>Return to Kolkata</h3>
+                        <p>Final exploration and departure</p>
+                    </div>
+                </div>
+                <div class="day-content">
+                    <p>Return to Kolkata for final sightseeing and departure preparations.</p>
+                    <div class="activities">
+                        <div class="activity">
+                            <h4>New Market Shopping</h4>
+                            <p>Buy Bengali handicrafts and souvenirs</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Kalighat Temple</h4>
+                            <p>Visit the ancient Kali temple</p>
+                        </div>
+                        <div class="activity">
+                            <h4>Departure Transfer</h4>
+                            <p>Airport/railway station drop-off</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="highlights">
+        <h1 class="heading">Trip Highlights</h1>
+        <div class="highlights-grid">
+            <div class="highlight-card">
+                <div class="highlight-image">
+                    <img src="https://s7ap1.scene7.com/is/image/incredibleindia/1-belur-math-kolkata-wb-city-hero?qlt=82&ts=1742155929553" alt="Victoria Memorial">
+                </div>
+                <div class="highlight-content">
+                    <h3>Colonial Architecture</h3>
+                    <p>Explore magnificent colonial buildings including Victoria Memorial, Howrah Bridge, and St. Paul's Cathedral showcasing British-era architectural grandeur.</p>
+                </div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-image">
+                    <img src="https://thumbs.dreamstime.com/b/uttarayan-complex-famous-tourist-attraction-located-shantiniketan-west-bengal-india-known-its-association-328320263.jpg" alt="Rabindranath Tagore">
+                </div>
+                <div class="highlight-content">
+                    <h3>Tagore's Legacy</h3>
+                    <p>Visit Shantiniketan, the Nobel laureate's university town, and experience his vision of holistic education and cultural harmony in rural Bengal.</p>
+                </div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-image">
+                    <img src="https://vardhmanvacations.com/blog/wp-content/uploads/2025/02/sundarbans-national-park-1024x584.jpg" alt="Royal Bengal Tiger">
+                </div>
+                <div class="highlight-content">
+                    <h3>Royal Bengal Tigers</h3>
+                    <p>Experience thrilling boat safaris in Sundarbans mangrove forests searching for the majestic Royal Bengal Tigers in their natural habitat.</p>
+                </div>
+            </div>
+            <div class="highlight-card">
+                <div class="highlight-image">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEilSDpgw4l4kmZzJY5Ggd1q7wlW4_re5G4WtkxYpVVej7JPnRGPUX9UbHSOhYBb7tkAy8amXJILtFStBjK3TR5UJvf4C1XkMhxTt46xu18t2ARNJN-nBEnRwQVa9gY077Hw-G403Z1azck/w1200-h630-p-k-no-nu/Bali-Dewangunj+Durga+Temple+5D.jpg" alt="Terracotta Temples">
+                </div>
+                <div class="highlight-content">
+                    <h3>Terracotta Temples</h3>
+                    <p>Marvel at the intricate terracotta temples of Bishnupur with their detailed carvings depicting stories from Hindu epics and local folklore.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Package Inclusions Section -->
+    <section class="inclusions-section">
+        <h1 class="heading">Package Inclusions</h1>
+        
+        <!-- Visual Cards -->
+        <div class="inclusions-grid">
+            <div class="inclusion-card">
+                <div class="inclusion-icon">
+                    <i class="fas fa-bed" style="color: #228B22;"></i>
+                </div>
+                <h3>Accommodation</h3>
+                <p>6 nights stay in comfortable 3-star hotels with breakfast included. Clean, well-maintained rooms with modern amenities in prime locations.</p>
+            </div>
+            <div class="inclusion-card">
+                <div class="inclusion-icon">
+                    <i class="fas fa-car" style="color: #228B22;"></i>
+                </div>
+                <h3>Transportation</h3>
+                <p>AC vehicle for entire journey including airport/railway station transfers. Experienced driver familiar with local routes and Bengali culture.</p>
+            </div>
+            <div class="inclusion-card">
+                <div class="inclusion-icon">
+                    <i class="fas fa-utensils" style="color: #228B22;"></i>
+                </div>
+                <h3>Meals</h3>
+                <p>Daily breakfast at hotels and traditional Bengali lunch during sightseeing. Experience authentic fish curry, rice, sweets, and local delicacies.</p>
+            </div>
+            <div class="inclusion-card">
+                <div class="inclusion-icon">
+                    <i class="fas fa-map-marked-alt" style="color: #228B22;"></i>
+                </div>
+                <h3>Sightseeing</h3>
+                <p>All mentioned sightseeing with entry fees to monuments and museums. Professional Bengali-speaking guides at major cultural and historical sites.</p>
+            </div>
+            <div class="inclusion-card">
+                <div class="inclusion-icon">
+                    <i class="fas fa-ship" style="color: #228B22;"></i>
+                </div>
+                <h3>Sundarbans Safari</h3>
+                <p>Boat safari in Sundarbans with tiger spotting opportunities, bird watching, and mangrove forest exploration with forest department guides.</p>
+            </div>
+        </div>
+        
+        <!-- Inline Inclusions/Exclusions -->
+        <div style="max-width: 120rem; margin: 4rem auto 0; background: #f9f9f9; padding: 4rem; border-radius: 1rem; border: 0.2rem solid #2c5530;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+                <div>
+                    <h3 style="color: #228B22; margin-bottom: 2rem; font-size: 2.2rem; display: flex; align-items: center;"><i class="fas fa-check-circle" style="margin-right: 1rem;"></i>What's Included</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #228B22; margin-right: 1rem; flex-shrink: 0;"></i>6 Nights Hotel Stay</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #228B22; margin-right: 1rem; flex-shrink: 0;"></i>Daily Breakfast</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #228B22; margin-right: 1rem; flex-shrink: 0;"></i>AC Transportation</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #228B22; margin-right: 1rem; flex-shrink: 0;"></i>Professional Driver</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #228B22; margin-right: 1rem; flex-shrink: 0;"></i>All Sightseeing</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #228B22; margin-right: 1rem; flex-shrink: 0;"></i>Sundarbans Safari</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #228B22; margin-right: 1rem; flex-shrink: 0;"></i>Local Guide Services</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #228B22; margin-right: 1rem; flex-shrink: 0;"></i>Entry Fees</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #228B22; margin-right: 1rem; flex-shrink: 0;"></i>Travel Insurance</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-check" style="color: #228B22; margin-right: 1rem; flex-shrink: 0;"></i>24/7 Support</div>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="color: #e74c3c; margin-bottom: 2rem; font-size: 2.2rem; display: flex; align-items: center;"><i class="fas fa-times-circle" style="color: #e74c3c; margin-right: 1rem;"></i>What's Not Included</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Flight/Train Tickets</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Lunch & Dinner</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Personal Expenses</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Shopping Items</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Camera Fees</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Tips & Gratuities</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Medical Expenses</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Extra Services</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Boat Permits</div>
+                        <div style="font-size: 1.4rem; color: #666; padding: 0.8rem 0; display: flex; align-items: center;"><i class="fas fa-times" style="color: #e74c3c; margin-right: 1rem; flex-shrink: 0;"></i>Optional Activities</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="booking-section" id="booking">
+        <div class="booking-hero">
+            <h1>Ready for Your West Bengal Adventure?</h1>
+            <p>Book your 7-day cultural journey through the Land of Tagore today and explore the rich heritage of Bengal. Limited seats available!</p>
+        </div>
+        
+        <div class="booking-container">
+            <div class="booking-form-container">
+                <h2><i class="fas fa-calendar-check" style="margin-right: 1rem;"></i>Book Your Trip</h2>
+                <form class="booking-form" onsubmit="handleBooking(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" placeholder="First Name *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Last Name *" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="email" placeholder="Email Address *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Phone Number *" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="date" title="Preferred Travel Date" required>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="">Number of Travelers</option>
+                                <option value="1">1 Person</option>
+                                <option value="2">2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                                <option value="5">5 People</option>
+                                <option value="6">6+ People</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <select required>
+                            <option value="">Select Package Type</option>
+                            <option value="standard">Standard Package - ₹12,999</option>
+                            <option value="deluxe">Deluxe Package - ₹14,999</option>
+                            <option value="premium">Premium Package - ₹16,999</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="4" placeholder="Special Requirements / Message (Optional)"></textarea>
+                    </div>
+                    <button type="submit" class="booking-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        Book Now - Secure Your Spot!
+                    </button>
+                    <div class="booking-guarantee">
+                        <div class="guarantee-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure Booking</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <span>Best Price Guarantee</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="fas fa-headset"></i>
+                            <span>24/7 Support</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="booking-features">
+                <div class="feature">
+                    <i class="fas fa-clock"></i>
+                    <div class="feature-content">
+                        <h3>Instant Confirmation</h3>
+                        <p>Get immediate booking confirmation via email and SMS. Our team will contact you within 24 hours to finalize all details and provide complete travel documentation.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-user-shield"></i>
+                    <div class="feature-content">
+                        <h3>Experienced Team</h3>
+                        <p>Our experienced cultural guides have deep knowledge of Bengali heritage and history. Local experts ensure authentic experiences and safety throughout your journey.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <div class="feature-content">
+                        <h3>Flexible Payment</h3>
+                        <p>Pay just 30% advance to confirm your booking. Balance payment can be made before departure. Multiple payment options available including UPI, cards, and bank transfer.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-sync-alt"></i>
+                    <div class="feature-content">
+                        <h3>Free Cancellation</h3>
+                        <p>Cancel up to 15 days before departure with full refund. We understand plans can change, so we offer flexible cancellation and rescheduling policies for your convenience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; created by Sagar Bisht | all rights reserved!</p>
+    </footer>
+
+    <script>
+        function handleBooking(event) {
+            event.preventDefault();
+            
+            // Collect form data
+            const formData = new FormData(event.target);
+            const bookingData = {};
+            
+            // Get all form inputs
+            const inputs = event.target.querySelectorAll('input, select, textarea');
+            inputs.forEach(input => {
+                if (input.value.trim()) {
+                    bookingData[input.placeholder || input.name] = input.value;
+                }
+            });
+            
+            // Show confirmation message
+            alert('Thank you for your booking request! 🏛️\n\nWe have received your details and our travel expert will contact you within 24 hours to confirm your West Bengal cultural journey.\n\nBooking Reference: WB' + Date.now() + '\n\nGet ready for an amazing heritage experience!');
+            
+            // Reset form
+            event.target.reset();
+            
+            // In a real application, you would send this data to your backend
+            console.log('Booking Data:', bookingData);
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        window.addEventListener('scroll', () => {
+            const cards = document.querySelectorAll('.day-card, .highlight-card, .inclusion-card');
+            cards.forEach(card => {
+                const cardTop = card.getBoundingClientRect().top;
+                const cardVisible = 150;
+                
+                if (cardTop < window.innerHeight - cardVisible) {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        // Initialize cards with animation styles
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.day-card, .highlight-card, .inclusion-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = `all 0.6s ease`;
+            });
+        });
+    </script>
+
+</body>
+</html>
