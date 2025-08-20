@@ -40,13 +40,9 @@ Tour-Project-main/
 
 ---
 
-## 🖼 **Screenshots**
+## 🌐 **Live Demo**
 
-* Screenshot 2025-07-01 080637.png
-* Screenshot 2025-07-01 080659.png
-* Screenshot 2025-07-01 080746.png
-* Screenshot 2025-07-01 080802.png
-* Screenshot 2025-07-01 080819.png
+👉 [Click here to view the live demo](https://sagarbisht1710.github.io/Tour-Project-main/index.html)
 
 ---
 
